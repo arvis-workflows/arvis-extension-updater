@@ -1,0 +1,34 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jopemachine/arvis-extension-validator/master/workflow-schema.json",
+    "creator": "jopemachine",
+    "name": "arvis-extension-updater",
+    "enabled": true,
+    "description": "",
+    "readme": "",
+    "version": "0.0.1",
+    "webAddress": "",
+    "commands": [
+        {
+            "type": "keyword",
+            "command": "update",
+            "title": "Update all extensions to latest version",
+            "subtitle": "(Only update extensions installed by npm)",
+            "argType": "no",
+            "actions": [
+                {
+                    "type": "script",
+                    "modifiers": "normal",
+                    "script": "node update.js",
+                    "actions": [
+                        {
+                            "type": "notification",
+                            "modifiers": "normal",
+                            "title": "{query}",
+                            "text": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
