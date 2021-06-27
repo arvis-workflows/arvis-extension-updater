@@ -2,6 +2,8 @@
 
 > Arvis extension updater
 
+![](./demo.png)
+
 Note that this workflow will only update the extensions managed by npm, including itself.
 
 This lib is inspired and cloned by [alfred-updater](https://github.com/SamVerschueren/alfred-updater).
