@@ -11,7 +11,7 @@ This lib is inspired and cloned by [alfred-updater](https://github.com/SamVersch
 ## Install
 
 ```
-$ npm install -g arvis-updater
+$ npm install -g arvis-extension-updater
 ```
 
 ## Usage
