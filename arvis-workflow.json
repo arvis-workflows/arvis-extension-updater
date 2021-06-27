@@ -3,10 +3,11 @@
     "creator": "jopemachine",
     "name": "arvis-extension-updater",
     "enabled": true,
-    "description": "",
+    "description": "Arvis extension updater",
+    "defaultIcon": "icon.png",
     "readme": "",
     "version": "0.0.1",
-    "webAddress": "",
+    "webAddress": "https://github.com/jopemachine/arvis-extension-updater",
     "commands": [
         {
             "type": "keyword",

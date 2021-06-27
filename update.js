@@ -5,7 +5,7 @@ const path = require('path');
 const execa = require('execa');
 const readPkg = require('read-pkg');
 const fse = require('fs-extra');
-const { findSymlinks, toMessage } = require('./lib/utils');
+const { findValidSymlinks, toMessage } = require('./lib/utils');
 
 const output = [];
 
@@ -18,13 +18,13 @@ const update = async pkg => {
 };
 
 const checkAndUpdate = async filePath => {
-  const pkg = await readPkg({ cwd: filePath });
-
-  if (!pkg.name || !pkg.version) {
-    return;
-  }
-
   try {
+    const pkg = await readPkg({ cwd: filePath });
+
+    if (!pkg.name || !pkg.version) {
+      return;
+    }
+
     const version = await latestVersion(pkg.name);
 
     if (semver.gt(version, pkg.version)) {
@@ -37,12 +37,13 @@ const checkAndUpdate = async filePath => {
 
 (async () => {
   try {
-    const extensionDataDir = arvish.env.data;
+    const tempArr = (arvish.env.data).split(path.sep);
+    const extensionDataDir = tempArr.slice(tempArr, tempArr.length - 2).join(path.sep);
 
     // Retrieve all the symlinks from the workflows directory
     const filePaths = [
-      ...await findSymlinks(path.resolve(extensionDataDir), 'workflows'),
-      ...await findSymlinks(path.resolve(extensionDataDir), 'plugins')
+      ...await findValidSymlinks(path.resolve(extensionDataDir, 'workflows')),
+      ...await findValidSymlinks(path.resolve(extensionDataDir, 'plugins'))
     ];
 
     // Iterate over all the workflows, check if they are outdated and update them

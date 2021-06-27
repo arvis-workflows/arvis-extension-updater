@@ -24,3 +24,8 @@ The workflow will start updating all the outdated extensions and will notify you
 - [arvish](https://github.com/sindresorhus/alfy) - Create Arvis extension with ease
 - [arvis-notifier](https://github.com/samverschueren/arvis-notifier) - Update notifications for your Arvis extension
 
+## Icon sources
+
+This lib uses below icon sources
+
+<a target="_blank" href="https://icons8.com">Image</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
