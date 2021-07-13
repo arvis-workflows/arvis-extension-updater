@@ -7,7 +7,7 @@
     "defaultIcon": "icon.png",
     "readme": "",
     "version": "0.0.3",
-    "webAddress": "https://github.com/jopemachine/arvis-extension-updater",
+    "webAddress": "https://github.com/arvis-workflows/arvis-extension-updater",
     "commands": [
         {
             "type": "keyword",
