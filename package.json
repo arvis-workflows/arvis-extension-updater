@@ -1,21 +1,26 @@
 {
   "name": "arvis-extension-updater",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Arvis extension updater",
   "main": "update.js",
+  "bin": {
+    "arvis-extension-updater": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint **.js --fix",
     "postinstall": "arvish-init",
-    "preuninstall": "arvish-cleanup"
+    "preuninstall": "arvish-cleanup",
+    "prepublishOnly": "arvish-prepublish"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jopemachine/arvis-extension-updater.git"
+    "url": "git+https://github.com/arvis-workflows/arvis-extension-updater.git"
   },
   "keywords": [
     "arvis",
     "arvis-workflow",
+    "arvis-plugin",
     "arvis-extension",
     "arvish"
   ],
@@ -29,11 +34,12 @@
   "author": "jopemachine",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jopemachine/arvis-extension-updater/issues"
+    "url": "https://github.com/arvis-workflows/arvis-extension-updater/issues"
   },
-  "homepage": "https://github.com/jopemachine/arvis-extension-updater#readme",
+  "homepage": "https://github.com/arvis-workflows/arvis-extension-updater#readme",
   "dependencies": {
-    "arvish": ">=0.3.1",
+    "arvish": ">=0.6.0",
+    "env-paths": "^2.2.1",
     "execa": "^5.1.1",
     "fs-extra": "^10.0.0",
     "latest-version": "^5.1.0",

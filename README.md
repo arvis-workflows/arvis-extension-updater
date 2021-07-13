@@ -21,6 +21,14 @@ The workflow will start updating all the outdated extensions and will notify you
 
 > Note: Updating your extensions can take a while. Be patient!
 
+You can also update by **cli without through arvis**.
+
+Just type below command on cli.
+
+```
+$ arvis-extension-updater
+```
+
 ## Related
 
 - [arvish](https://github.com/sindresorhus/alfy) - Create Arvis extension with ease

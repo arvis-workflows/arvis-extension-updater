@@ -6,7 +6,7 @@
     "description": "Arvis extension updater",
     "defaultIcon": "icon.png",
     "readme": "",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "webAddress": "https://github.com/jopemachine/arvis-extension-updater",
     "commands": [
         {
@@ -19,7 +19,7 @@
                 {
                     "type": "script",
                     "modifiers": "normal",
-                    "script": "node update.js",
+                    "script": "node index.js",
                     "actions": [
                         {
                             "type": "notification",
